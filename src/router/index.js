@@ -1,9 +1,15 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+/*
+ * @Date: 07/03/2021 08.58.13 +0800
+ * @Author: KnowsCount
+ * @LastEditTime: 07/03/2021 09.16.23 +0800
+ * @FilePath: /tutter/src/router/index.js
+ */
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import routes from './routes'
+import routes from "./routes";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 /*
  * If not building with SSR mode, you can
@@ -14,17 +20,17 @@ Vue.use(VueRouter)
  * with the Router instance.
  */
 
-export default function (/* { store, ssrContext } */) {
-  const Router = new VueRouter({
-    scrollBehavior: () => ({ x: 0, y: 0 }),
-    routes,
+export default function(/* { store, ssrContext } */) {
+    const Router = new VueRouter({
+        scrollBehavior: () => ({ x: 0, y: 0 }),
+        routes,
 
-    // Leave these as they are and change in quasar.conf.js instead!
-    // quasar.conf.js -> build -> vueRouterMode
-    // quasar.conf.js -> build -> publicPath
-    mode: process.env.VUE_ROUTER_MODE,
-    base: process.env.VUE_ROUTER_BASE
-  })
+        // Leave these as they are and change in quasar.conf.js instead!
+        // quasar.conf.js -> build -> vueRouterMode
+        // quasar.conf.js -> build -> publicPath
+        mode: process.env.VUE_ROUTER_MODE,
+        base: process.env.VUE_ROUTER_BASE
+    });
 
-  return Router
+    return Router;
 }

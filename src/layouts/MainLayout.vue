@@ -1,105 +1,76 @@
+<!--
+ * @Date: 07/03/2021 08.58.13 +0800
+ * @Author: KnowsCount
+ * @LastEditTime: 07/03/2021 10.00.26 +0800
+ * @FilePath: /tutter/src/layouts/MainLayout.vue
+-->
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+    <q-layout view="lHr lpR fFf">
+        <q-header bordered class="bg-white text-black">
+            <q-toolbar>
+                <q-btn dense flat round icon="menu" @click="left = !left" />
+                <q-toolbar-title class="text-weight-bold">
+                    <!-- <q-avatar>
+                        <img
+                            src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg"
+                        />
+                    </q-avatar> -->
+                    Tutter
+                </q-toolbar-title>
+            </q-toolbar>
+        </q-header>
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-drawer
+            show-if-above
+            v-model="left"
+            side="left"
+            bordered
+            :width="285"
+        >
+            <q-icon
+                name="fas fa-dove"
+                size="lg"
+                color="primary"
+                class="q-pa-md"
+            />
+            <nav-bar />
+        </q-drawer>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+        <q-drawer show-if-above v-model="right" side="right" bordered>
+            <q-input
+                placeholder="Search"
+                outlined
+                dense
+                rounded
+                class="q-ma-md"
+            >
+                <template v-slot:prepend>
+                    <q-icon name="search" />
+                </template>
+            </q-input>
+            <newsFeed />
+        </q-drawer>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label header class="text-grey-8">
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
-    <q-page-container>
-      <router-view />
-      <!-- where page will be loaded-->
-    </q-page-container>
-  </q-layout>
+        <q-page-container>
+            <router-view />
+        </q-page-container>
+    </q-layout>
 </template>
 
 <script>
-import EssentialLink from "components/EssentialLink.vue";
-
-const linksData = [
-  {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev"
-  },
-  {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework"
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev"
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev"
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev"
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev"
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev"
-  }
-];
+import navBar from "components/navBar";
+import newsFeed from "components/newsFeed.vue";
 
 export default {
-  name: "MainLayout",
-  components: { EssentialLink },
-  data() {
-    return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
-    };
-  }
+    components: {
+        navBar,
+        newsFeed
+    },
+    data() {
+        return {
+            left: false,
+            right: false
+        };
+    }
 };
 </script>
