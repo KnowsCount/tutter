@@ -1,7 +1,7 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 07/03/2021 18.24.58 +0800
+ * @LastEditTime: 08/03/2021 07.31.57 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
 <template>
@@ -37,7 +37,8 @@
 				name="fas fa-dove"
 				size="lg"
 				color="primary"
-				class="q-px-lg q-pt-xl"
+				class="q-py-lg q-pt-xl"
+				style="padding-left:48px"
 			/>
 			<nav-bar />
 		</q-drawer>
