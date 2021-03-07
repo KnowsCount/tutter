@@ -1,7 +1,7 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 07/03/2021 13.26.05 +0800
+ * @LastEditTime: 07/03/2021 18.24.58 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
 <template>
@@ -13,7 +13,7 @@
 					name="fas fa-dove"
 					size="sm"
 					color="primary"
-					class="q-pa-md lt-md absolute-center"
+					class="q-pa-md lt-md header-icon"
 				/>
 				<q-toolbar-title class="text-weight-bold">
 					<!-- <q-avatar>
@@ -31,7 +31,7 @@
 			v-model="left"
 			side="left"
 			bordered
-			:width="285"
+			:width="364"
 		>
 			<q-icon
 				name="fas fa-dove"
@@ -42,7 +42,14 @@
 			<nav-bar />
 		</q-drawer>
 
-		<q-drawer show-if-above v-model="right" side="right" bordered>
+		<q-drawer
+			show-if-above
+			v-model="right"
+			side="right"
+			bordered
+			class="q-pr-xl"
+			:width="392"
+		>
 			<q-input
 				placeholder="Search Tutter"
 				outlined
@@ -80,3 +87,12 @@ export default {
 	}
 };
 </script>
+
+<style lang="scss">
+.header-icon {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+</style>
