@@ -1,7 +1,7 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 07/03/2021 13.10.17 +0800
+ * @LastEditTime: 07/03/2021 13.26.05 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
 <template>
@@ -9,6 +9,12 @@
 		<q-header bordered class="bg-white text-black">
 			<q-toolbar>
 				<q-btn dense flat round icon="menu" @click="left = !left" />
+				<q-icon
+					name="fas fa-dove"
+					size="sm"
+					color="primary"
+					class="q-pa-md lt-md absolute-center"
+				/>
 				<q-toolbar-title class="text-weight-bold">
 					<!-- <q-avatar>
 						<img
@@ -38,7 +44,7 @@
 
 		<q-drawer show-if-above v-model="right" side="right" bordered>
 			<q-input
-				placeholder="Search"
+				placeholder="Search Tutter"
 				outlined
 				dense
 				rounded
