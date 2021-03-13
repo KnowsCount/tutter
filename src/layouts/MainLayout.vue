@@ -1,7 +1,7 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 08/03/2021 07.31.57 +0800
+ * @LastEditTime: 13/03/2021 14.10.39 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
 <template>
@@ -21,7 +21,7 @@
 							src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg"
 						/>
 					</q-avatar> -->
-					Tutter
+					{{ $route.name }}
 				</q-toolbar-title>
 			</q-toolbar>
 		</q-header>

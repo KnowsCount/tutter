@@ -1,7 +1,7 @@
 <!--
  * @Date: 07/03/2021 09.31.44 +0800
  * @Author: KnowsCount
- * @LastEditTime: 08/03/2021 07.33.02 +0800
+ * @LastEditTime: 13/03/2021 14.14.16 +0800
  * @FilePath: /tutter/src/components/navBar.vue
 -->
 
@@ -17,7 +17,7 @@
 					>Home</q-item-section
 				>
 			</q-item>
-			<q-item clickable v-ripple to="/">
+			<q-item clickable v-ripple to="/explore">
 				<q-item-section avatar>
 					<q-icon color="primary" name="explore" size="md" />
 				</q-item-section>
