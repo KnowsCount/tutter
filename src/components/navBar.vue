@@ -1,12 +1,12 @@
 <!--
  * @Date: 07/03/2021 09.31.44 +0800
  * @Author: KnowsCount
- * @LastEditTime: 13/03/2021 14.14.16 +0800
+ * @LastEditTime: 09/04/2021 00.47.29 +0800
  * @FilePath: /tutter/src/components/navBar.vue
 -->
 
 <template>
-	<div class="q-pa-md" style="max-width: 350px;padding-left: 35px">
+	<div class="q-pa-md" style="max-width: 350px;padding-left: 25vh">
 		<q-list>
 			<q-item clickable v-ripple to="/">
 				<q-item-section avatar>

@@ -13,7 +13,9 @@
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "eslint": "^7.21.0",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "vditor": "^3.8.4",
+    "vue-dayjs-plugin": "^1.0.0"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

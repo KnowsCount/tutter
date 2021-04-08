@@ -1,20 +1,17 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 13/03/2021 14.10.39 +0800
+ * @LastEditTime: 09/04/2021 00.48.40 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
 <template>
 	<q-layout view="lHr lpR fFf">
-		<q-header bordered class="bg-white text-black">
+		<q-header class="bg-white text-black">
 			<q-toolbar>
-				<q-btn dense flat round icon="menu" @click="left = !left" />
-				<q-icon
-					name="fas fa-dove"
-					size="sm"
-					color="primary"
-					class="q-pa-md lt-md header-icon"
-				/>
+				<!-- <q-btn dense flat round icon="menu" @click="left = !left" /> -->
+				<h3 class="q-pa-md lt-md header-icon" color="primary">
+					Tutter
+				</h3>
 				<q-toolbar-title class="text-weight-bold">
 					<!-- <q-avatar>
 						<img
@@ -23,22 +20,27 @@
 					</q-avatar> -->
 					{{ $route.name }}
 				</q-toolbar-title>
+				<q-input
+					placeholder="Search Tutter"
+					dense
+					filled
+					v-model="search"
+					class="q-ma-md"
+				>
+					<template v-slot:prepend>
+						<q-icon name="search" />
+					</template>
+				</q-input>
 			</q-toolbar>
 		</q-header>
 
-		<q-drawer
-			show-if-above
-			v-model="left"
-			side="left"
-			bordered
-			:width="364"
-		>
+		<q-drawer show-if-above v-model="left" side="left" :width="390">
 			<q-icon
 				name="fas fa-dove"
 				size="lg"
 				color="primary"
 				class="q-py-lg q-pt-xl"
-				style="padding-left:48px"
+				style="padding-left:25vh"
 			/>
 			<nav-bar />
 		</q-drawer>
@@ -47,22 +49,9 @@
 			show-if-above
 			v-model="right"
 			side="right"
-			bordered
-			class="q-pr-xl"
-			:width="392"
+			class="q-pr-xl background"
+			:width="300"
 		>
-			<q-input
-				placeholder="Search Tutter"
-				outlined
-				dense
-				rounded
-				class="q-ma-md"
-			>
-				<template v-slot:prepend>
-					<q-icon name="search" />
-				</template>
-			</q-input>
-			<newsFeed />
 		</q-drawer>
 
 		<q-page-container>
@@ -73,12 +62,10 @@
 
 <script>
 import navBar from "components/navBar";
-import newsFeed from "components/newsFeed.vue";
 
 export default {
 	components: {
-		navBar,
-		newsFeed
+		navBar
 	},
 	data() {
 		return {
@@ -90,10 +77,18 @@ export default {
 </script>
 
 <style lang="scss">
-.header-icon {
+.fit {
+	background-color: #fafafa;
+}
+
+.header-text {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.q-toolbar {
+	background-color: #fafafa;
 }
 </style>

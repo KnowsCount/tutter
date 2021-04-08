@@ -1,7 +1,7 @@
 /*
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 13/03/2021 14.12.29 +0800
+ * @LastEditTime: 09/04/2021 00.26.41 +0800
  * @FilePath: /tutter/src/router/routes.js
  */
 const routes = [
@@ -12,7 +12,7 @@ const routes = [
 			{
 				path: "",
 				component: () => import("src/pages/pageHome.vue"),
-				name: "Home"
+				name: "Memo"
 			},
 			{
 				path: "/explore",
