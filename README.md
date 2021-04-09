@@ -1,13 +1,13 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 07/03/2021 12.05.51 +0800
+ * @LastEditTime: 09/04/2021 17.00.03 +0800
  * @FilePath: /tutter/README.md
 -->
 
 # Tutter (tutter)
 
-fake twitter
+fake flomo
 
 ## Install the dependencies
 

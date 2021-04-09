@@ -1,7 +1,7 @@
 <!--
  * @Date: 26/03/2021 18.28.52 +0800
  * @Author: KnowsCount
- * @LastEditTime: 09/04/2021 00.25.57 +0800
+ * @LastEditTime: 09/04/2021 16.46.27 +0800
  * @FilePath: /tutter/src/components/inputBox.vue
 -->
 
@@ -9,8 +9,9 @@
 	<div class="q-py-lg q-px-md">
 		<q-input
 			outlined
-			v-model="ph"
+			v-model="newTuttContent"
 			placeholder="现在的想法是..."
+			class="tuttBox"
 			:dense="dense"
 		>
 			<template v-slot:append>
@@ -22,9 +23,9 @@
 				/>
 			</template>
 
-			<template v-slot:hint>
+			<!-- <template v-slot:hint>
 				Field hint
-			</template>
+			</template> -->
 
 			<template v-slot:after>
 				<q-btn
@@ -40,8 +41,22 @@
 	</div>
 </template>
 
+<style scoped>
+#tuttbox {
+	font-size: 19px;
+	line-height: 10.4 !important;
+}
+</style>
+
 <script>
 export default {
-	name: "inputBox"
+	name: "inputBox",
+	data() {
+		return {
+			newTuttContent: "",
+			ph: "",
+			dense: false
+		};
+	}
 };
 </script>

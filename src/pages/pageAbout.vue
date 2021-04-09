@@ -6,7 +6,7 @@
 -->
 <template>
 	<q-page class="q-pa-lg">
-		<h4 class="q-mt-none q-mb-md text-weight-bold">About</h4>
+		<!-- <h4 class="q-mt-none q-mb-md text-weight-bold">关于</h4> -->
 		<div class="text-body1">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

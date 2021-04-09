@@ -1,9 +1,10 @@
 <!--
  * @Date: 07/03/2021 08.58.13 +0800
  * @Author: KnowsCount
- * @LastEditTime: 09/04/2021 00.48.40 +0800
+ * @LastEditTime: 09/04/2021 16.52.32 +0800
  * @FilePath: /tutter/src/layouts/MainLayout.vue
 -->
+
 <template>
 	<q-layout view="lHr lpR fFf">
 		<q-header class="bg-white text-black">
@@ -34,14 +35,15 @@
 			</q-toolbar>
 		</q-header>
 
-		<q-drawer show-if-above v-model="left" side="left" :width="390">
-			<q-icon
-				name="fas fa-dove"
-				size="lg"
+		<q-drawer show-if-above v-model="left" side="left" :width="420">
+			<h4
 				color="primary"
-				class="q-py-lg q-pt-xl"
-				style="padding-left:25vh"
-			/>
+				class="header-icon"
+				style="padding-left:25vh;line-height:0px"
+			>
+				Tutter
+			</h4>
+			<calendar-heatmap :endDate="today" :values="values" />
 			<nav-bar />
 		</q-drawer>
 
@@ -66,12 +68,6 @@ import navBar from "components/navBar";
 export default {
 	components: {
 		navBar
-	},
-	data() {
-		return {
-			left: false,
-			right: false
-		};
 	}
 };
 </script>

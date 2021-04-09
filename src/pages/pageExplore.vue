@@ -1,12 +1,12 @@
 <!--
  * @Date: 13/03/2021 14.11.35 +0800
  * @Author: KnowsCount
- * @LastEditTime: 09/04/2021 00.27.04 +0800
+ * @LastEditTime: 09/04/2021 02.04.14 +0800
  * @FilePath: /tutter/src/pages/pageExplore.vue
 -->
 <template>
 	<q-page class="q-pa-lg">
-		<h4 class="q-mt-none q-mb-md text-weight-bold">Explore</h4>
+		<!-- <h4 class="q-mt-none q-mb-md text-weight-bold">随机漫步</h4> -->
 		<div class="text-body1">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
